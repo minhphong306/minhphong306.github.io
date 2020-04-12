@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Minh Phong 306 - Make Things Simple</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <script src="lib/underscore/underscore-min.js" type="text/javascript"></script>
+    <script src="js/utils.js" type="text/javascript"></script>
+    <script src="app/module/app.js" type="text/javascript"></script>
+    <script src="app/module/main.factory.js" type="text/javascript"></script>
+
+    <script src="app/controller/postmanCtrl.js" type="text/javascript"></script>
+
+    <script src="app/module/config.router.js" type="text/javascript"></script>
+    <script src="lib/typed/typed.js" type="text/javascript"></script>
+    <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="/fav.ico">
+
+    <link href="lib/pnotify/pnotify.custom.min.css" rel="stylesheet"
+          type="text/css"/>
+    <script src="lib/pnotify/pnotify.custom.min.js"
+            type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+    <!--Start nav-->
+    <div class="row">
+        <div class="header">
+            <h1 class="text-center"><span id="nav_text"></span></h1>
+        </div>
+    </div>
+    <div class="row text-center">
+        <blockquote>
+            <p id="main_quote"></p>
+            <footer><cite title="Author" id="main_quote_author"></cite></footer>
+        </blockquote>
+    </div>
+    <!--End nav-->
+
+    <!--Start body-->
+    <div class="row">
+        <div class="col-md-3 mp-padding-left-0 menu">
+            <!--Start static panel-->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <i class="glyphicon glyphicon-console"> </i>
+                    <a href="/"><span class="mp-menu-text">Static</span></a>
+                </div>
+                <div class="mp-panel-menu panel-body ">
+                    <div class=" list-group mp-margin-bottom-0">
+                        <a ui-sref="home" class="list-group-item">
+                            <i class="fa fa-home menu-icon"></i>
+                            <span class="mp-menu-text"> Trang chủ</span>
+                        </a>
+                    </div>
+                    <div class=" list-group mp-margin-bottom-0">
+                        <a href="https://minhphong306.wordpress.com/" target="_blank" class="list-group-item">
+                            <i class="fa fa-rss menu-icon"></i>
+                            <span class="mp-menu-text"> Blog</span>
+                        </a>
+                    </div>
+                    <div class=" list-group mp-margin-bottom-0">
+                        <a ui-sref="project" class="list-group-item">
+                            <i class="fa fa-code menu-icon"></i>
+                            <span class="mp-menu-text"> Projects</span>
+                        </a>
+                    </div>
+                    <div class=" list-group mp-margin-bottom-0">
+                        <a ui-sref="about" class="list-group-item">
+                            <i class="fa fa-info-circle menu-icon"></i>
+                            <span class="mp-menu-text"> About me</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--End static panel-->
+
+
+            <!--Start tool panel-->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <i class="glyphicon glyphicon-console"> </i>
+                    <a href="/"><span class="mp-menu-text">Công cụ</span></a>
+                </div>
+                <div class="mp-panel-menu panel-body ">
+                    <div class=" list-group mp-margin-bottom-0">
+                        <a ui-sref="tool.postman" class="list-group-item">
+                            <i class="fa fa-rocket menu-icon"></i>
+                            <span class="mp-menu-text"> Postman tool</span>
+                        </a>
+                    </div>
+                    <div class=" list-group mp-margin-bottom-0">
+                        <a ui-sref="tool.snippet" class="list-group-item">
+                            <i class="fa fa-rocket menu-icon"></i>
+                            <span class="mp-menu-text"> Code snippet</span>
+                        </a>
+                    </div>
+                    <div class=" list-group mp-margin-bottom-0">
+                        <a ui-sref="tool.bookmark" class="list-group-item">
+                            <i class="fa fa-rocket menu-icon"></i>
+                            <span class="mp-menu-text"> Smart bookmarker</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--End tool panel-->
+
+            <!--Start quick copy panel-->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <i class="glyphicon glyphicon-console"> </i>
+                    <a href="/"><span class="mp-menu-text">Quick copy</span></a>
+                </div>
+                <div class="mp-panel-menu panel-body ">
+                    <div class=" list-group mp-margin-bottom-0">
+                        <a class="list-group-item">
+                            <i class="fa fa-rocket menu-icon"></i>
+                            <span class="mp-menu-text"> Updating...</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--End quick copy panel-->
+        </div>
+        <div class="col-md-9 mp-padding-left-0">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <i class="glyphicon glyphicon-console"> </i>
+                    <a href="/"><span class="mp-menu-text">Đại ca Phong</span></a>
+
+                </div>
+                <div class="panel-body" ui-view>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End body-->
+
+    <!--Start footer-->
+    <div class="row">
+    </div>
+    <!--End footer-->
+</div>
+<script>
+    $(document).ready(function () {
+        var typed = new Typed('#nav_text', {
+            strings: ['MinhPhong306.Com', 'Make Things Simple :)'],
+            fadeOutDelay: 500,
+            typeSpeed: 50,
+            loop: true
+        });
+    });
+</script>
+</body>
+</html>
