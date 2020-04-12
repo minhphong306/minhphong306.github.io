@@ -26,7 +26,7 @@
             </p>
             <p>
                 <i class="fa fa-stack-overflow  menu-icon"></i>
-                <a href="https://stackoverflow.com/users/8118489/do-minh-phong" target="_blank">minhphong306</a>
+                <a href="https://stackoverflow.com/users/7228412/do-minh-phong" target="_blank">minhphong306</a>
             </p>
 
         </div>
