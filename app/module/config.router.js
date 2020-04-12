@@ -34,5 +34,6 @@ angular
                 url: '/sbase',
                 controller: 'sbaseCtrl',
                 templateUrl: 'templates/sbase.html',
+                controllerAs: 'sb',
             })
     });

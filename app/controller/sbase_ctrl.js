@@ -17,18 +17,25 @@ app.controller('sbaseCtrl', function () {
         'prod': 3,
     }
 
-    var sbaseData = {
+    const process = [];
+
+    vm.sbaseData = {
+        shop: {},
+        shopUrl: {},
         boostrap: {},
-        env: '',
+        env: 'Production',
     }
 
-    const process = [];
+
     vm.productSingle = {
+        id: 0,
         url: '',
-        cacheKeys: [],
+        cacheKeySingle: 'single',
+        caceKeyMap: 'map',
         isWrongCache: false,
         data: {},
         error: '',
+        currentStep: 'Chưa làm gì'
     }
 
     function debugProductSingle() {
@@ -38,12 +45,20 @@ app.controller('sbaseCtrl', function () {
             return
         }
 
+        let {shop, shopErr} = getShop();
+        if (shopErr) {
+            vm.productSingle.error = shopErr;
+            return
+        }
+        vm.sbaseData.shop = shop
+
         let {env, envErr} = detectEnv();
         if (envErr) {
             vm.productSingle.error = envErr;
             return;
         }
-        sbaseData.env = env;
+
+        vm.sbaseData.env = env;
 
         let {bootstrap, bootstrapErr} = getBootstrap(vm.productSingle.url, env);
         if (bootstrapErr) {
