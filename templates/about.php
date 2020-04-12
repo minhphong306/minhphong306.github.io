@@ -2,9 +2,9 @@
     <div class="col-md-12">
         <div class="col-md-6 mp-text-medium">
             <h3 class="text-danger mp-padding-bottom-10">Giới thiệu</h3>
-            <p>Xin chào, tớ là Đại ca Phong... ý nhầm Phong. Hiện tại, tớ đang là Developer</p>
-            <p>Ngôn ngữ lập trình chính của tớ là Java + Spring Framework. Ngoài ra thì tớ có biết chút chút PHP để làm web <a href="http://minhphong306.com">minhphong306</a> và một số tool nho nhỏ</p>
-            <p>Tớ thích công nghệ, guitar, trống.</p>
+            <p>Xin chào, tớ là Đại ca Phong... ý nhầm Phong. Hiện tại, tớ đang là Go Developer</p>
+            <p>Xuất phát điểm thì tớ là Java developer, sau đó chuyển sang code Golang, PHP, C# loạn xị ngậu cả :)).</p>
+            <p>Tớ thích viết blog, chơi guitar, piano.</p>
             <p>Updating... :3</p>
             <p></p>
             <h3 class="text-danger mp-padding-bottom-10">Liên hệ</h3>
@@ -34,7 +34,7 @@
             <img 
                 class="img-responsive"
                 style="max-width: 100%; border-radius: 5%"
-                src="http://static.minhphong306.com/images/daicaphong/me.jpg"/>
+                src="https://minhphong306.files.wordpress.com/2020/01/tapdan_02.png?w=2000&h="/>
         </div>
     </div>
 </div>

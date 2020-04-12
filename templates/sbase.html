@@ -1,0 +1,37 @@
+<div class="row">
+    <h3 class="text-danger text-center">
+        Sbase tools
+    </h3>
+    <div class="bg bg-info mp-padding-10">
+        <h3 class="text-danger">Các feature support</h3>
+
+        <blockquote>
+            <p>- Product single</p>
+            <p>- Bootstrap (coming soon)...</p>
+        </blockquote>
+    </div>
+
+    <hr/>
+    <div class="mp-padding-10">
+        <h3 class="text-danger">Product single</h3>
+        <form method="POST" role="form" >
+            <div class="form-group">
+                <label for="ps_url">Input url</label>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span aria-hidden="true" class="glyphicon glyphicon-console"></span>
+                    </div>
+                    <input ng-model="security.input_str" id="ps_url" type="text"
+                           placeholder="Nhập vào string cần mã hóa MD5" required="required" autofocus="autofocus"
+                           class="form-control">
+                    <span class="input-group-btn">
+                <button ng-click="security.sha()" class="btn btn-primary">
+                    <span aria-hidden="true" class="fa fa-cogs"></span>
+                    Debug
+                </button>
+            </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
