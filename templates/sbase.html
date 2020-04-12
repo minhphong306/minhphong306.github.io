@@ -21,11 +21,11 @@
                     <div class="input-group-addon">
                         <span aria-hidden="true" class="glyphicon glyphicon-console"></span>
                     </div>
-                    <input ng-model="security.input_str" id="ps_url" type="text"
+                    <input ng-model="sb.productSingle.url" id="ps_url" type="text"
                            placeholder="Nhập vào url cần debug" required="required" autofocus="autofocus"
                            class="form-control">
                     <span class="input-group-btn">
-                <button ng-click="sbase.debugProductSingle()" class="btn btn-primary">
+                <button ng-click="sb.debugProductSingle()" class="btn btn-primary">
                     <span aria-hidden="true" class="fa fa-cogs"></span>
                     Debug
                 </button>
@@ -34,7 +34,8 @@
             </div>
         </form>
 
-        <p><span class="mp-text-bold">- Current step</span>: {{sb.productSingle.currentStep}}</p>
+        <p class="mp-text-bold">Debug logs:</p>
+        <p ng-repeat="item in sb.productSingle.debugLogs">- {{item}}</p>
         <table class="table table-hover">
             <thead>
             <tr>
@@ -45,13 +46,23 @@
             </thead>
             <tbody>
             <tr>
-                <td>Môi trường</td>
-                <td>{{sb.sbaseData.env}}</td>
+                <td>Shop</td>
+                <td>{{sb.sbaseData.shopUrl}}</td>
                 <td></td>
             </tr>
             <tr>
+                <td>Handle</td>
+                <td>{{sb.productSingle.handle}}</td>
+                <td></td>
+            </tr>
+<!--            <tr>-->
+<!--                <td>Môi trường</td>-->
+<!--                <td>{{sb.sbaseData.env}}</td>-->
+<!--                <td></td>-->
+<!--            </tr>-->
+            <tr>
                 <td>Bootstrap</td>
-                <td>{{sb.sbaseData.bootstrap.err || 'OK'}}</td>
+                <td>{{sb.sbaseData.bootstrap}}</td>
                 <td>
                     <button class="btn btn-primary">Open</button>
                     <button class="btn btn-primary">Copy url</button>
@@ -59,7 +70,7 @@
             </tr>
             <tr>
                 <td>Shop id</td>
-                <td>{{sb.sbaseData.bootstrap.err || 'OK'}}</td>
+                <td>{{sb.sbaseData.bootstrap.result.shop_id || '0'}}</td>
                 <td>
                     <button class="btn btn-primary">Copy</button>
                 </td>
