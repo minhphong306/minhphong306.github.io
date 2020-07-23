@@ -36,4 +36,10 @@ angular
                 templateUrl: 'templates/sbase.html',
                 controllerAs: 'sb',
             })
+            .state('tool.robo3t', {
+                url: '/robo3t',
+                controller: 'roboCtrl',
+                templateUrl: 'templates/robo.html',
+                controllerAs: 'rb',
+            })
     });

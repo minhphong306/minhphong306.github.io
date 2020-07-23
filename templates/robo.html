@@ -1,0 +1,23 @@
+<div class="row">
+    <h3 class="text-danger text-center">
+        Convert robo 3T response -> JSON
+    </h3>
+
+    <div class="mp-padding-10">
+        <div ng-if="rb.err.length > 0" class="bg bg-info mp-padding-10">
+            <h4 class="text-danger">{{rb.err}}</h4>
+        </div>
+        <h3 class="text-danger">Input</h3>
+        <textarea ng-model="rb.input" class="form-control" rows="5"></textarea>
+        <button ng-click="rb.convert()" class="btn btn-primary mp-margin-top-5 mp-margin-right-10">
+            <span class="fa fa-rocket"></span>
+            Convert
+        </button>
+        <button ng-click="rb.copy()" class="btn btn-primary mp-margin-top-5">
+            <span class="fa fa-copy"></span>
+            Copy output
+        </button>
+        <h3 class="text-danger">Output</h3>
+        <textarea id='rb_output' ng-model="rb.output" class="form-control" rows="5"></textarea>
+    </div>
+</div>

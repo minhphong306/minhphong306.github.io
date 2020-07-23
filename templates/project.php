@@ -44,5 +44,5 @@
         </tbody>
     </table>
 
-    <h4 class="text-danger">Còn vài cái nữa cơ. Mà lười update vô đây quá :))</h4>
+    <h4 class="text-danger">Updating...</h4>
 </div>

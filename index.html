@@ -25,6 +25,7 @@ and open the template in the editor.
     <script src="app/controller/postmanCtrl.js" type="text/javascript"></script>
     <script src="app/controller/snippet_ctrl.js" type="text/javascript"></script>
     <script src="app/controller/sbase_ctrl.js" type="text/javascript"></script>
+    <script src="app/controller/robo_ctrl.js" type="text/javascript"></script>
 
     <script src="app/module/config.router.js" type="text/javascript"></script>
     <script src="lib/typed/typed.js" type="text/javascript"></script>
@@ -98,10 +99,16 @@ and open the template in the editor.
                     <a href="/"><span class="mp-menu-text">Công cụ</span></a>
                 </div>
                 <div class="mp-panel-menu panel-body ">
-                    <div class=" list-group mp-margin-bottom-0">
+                    <!--<div class=" list-group mp-margin-bottom-0">
                         <a ui-sref="tool.sbase" class="list-group-item">
                             <i class="fa fa-rocket menu-icon"></i>
                             <span class="mp-menu-text"> Sbase tool</span>
+                        </a>
+                    </div>-->
+                    <div class=" list-group mp-margin-bottom-0">
+                        <a ui-sref="tool.robo3t" class="list-group-item">
+                            <i class="fa fa-rocket menu-icon"></i>
+                            <span class="mp-menu-text"> Robo 3T response -> JSON</span>
                         </a>
                     </div>
 <!--                    <div class=" list-group mp-margin-bottom-0">-->
@@ -166,7 +173,7 @@ and open the template in the editor.
 <script>
     $(document).ready(function () {
         var typed = new Typed('#nav_text', {
-            strings: ['minhphong306.github.io/home', 'Make Things Simple :)'],
+            strings: ['minhphong306.github.io', 'Make Things Simple :)'],
             fadeOutDelay: 500,
             typeSpeed: 50,
             loop: true
