@@ -2,10 +2,9 @@
     <div class="col-md-12">
         <div class="col-md-6 mp-text-medium">
             <h3 class="text-danger mp-padding-bottom-10">Giới thiệu</h3>
-            <p>Xin chào, tớ là Đại ca Phong... ý nhầm Phong. Hiện tại, tớ đang là Go Developer</p>
-            <p>Xuất phát điểm thì tớ là Java developer, sau đó chuyển sang code Golang, PHP, C# loạn xị ngậu cả :)).</p>
-            <p>Tớ thích viết blog, chơi guitar, piano.</p>
-            <p>Updating... :3</p>
+            <p>Xin chào, Phong. Mọi người thường gọi tớ là Phong Đỗ/ Phong Độ/ Phong Đại ca</p>
+            <p>Hiện tại thì tớ đang là Go Developer tại OCG</p>
+            <p>Tớ thích gái xinh, đọc blog, viết blog, chơi guitar, piano.</p>
             <p></p>
             <h3 class="text-danger mp-padding-bottom-10">Liên hệ</h3>
             <p>
