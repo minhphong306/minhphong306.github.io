@@ -1,0 +1,50 @@
+<div class="row form-horizontal">
+    <h3 class="text-danger text-center">
+        Replacer - thay thế nhanh
+    </h3>
+    <div class="mp-padding-10">
+        <div ng-if="rp.err.length > 0" class="bg bg-info mp-padding-10">
+            <h4 class="text-danger">{{rp.err}}</h4>
+        </div>
+
+        <form class="form-horizontal mp-margin-top-5">
+            <div class="form-group">
+                <label for="input" class="col-sm-2 control-label">Input</label>
+                <div class="col-sm-10">
+                    <textarea ng-model="rp.input" class="form-control" id="input" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="regex" class="col-sm-2 control-label">Regex</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="regex" placeholder="regex"  ng-model="rp.regex">
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn btn-primary">Load from storage</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary" ng-click="rp.convert()">
+                        <i class="fa fa-rocket"></i>
+                        Convert
+                    </button>
+                    <button type="submit" class="btn btn-primary" ng-click="rb.copy()">
+                        <i class="fa fa-copy"></i>
+                        Copy to clipboard
+                    </button>
+                    <button type="submit" class="btn btn-success" ng-click="rb.saveStorage()">
+                        <i class="fa fa-save"></i>
+                        Save to storage
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="output" class="col-sm-2 control-label">Output</label>
+                <div class="col-sm-10">
+                    <textarea ng-model="rp.output" id="output" class="form-control" rows="5"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

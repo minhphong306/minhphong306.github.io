@@ -1,0 +1,32 @@
+<div class="row form-horizontal">
+    <h3 class="text-danger text-center">
+        Bookmarker - tạo nhanh bookmark
+    </h3>
+    <div class="mp-padding-10">
+        <div ng-if="rp.err.length > 0" class="bg bg-info mp-padding-10">
+            <h4 class="text-danger">{{rp.err}}</h4>
+        </div>
+
+        <form class="form-horizontal mp-margin-top-5">
+            <div class="form-group">
+                <label for="input" class="col-sm-2 control-label">Input code</label>
+                <div class="col-sm-10">
+                    <textarea ng-model="bm.input" class="form-control" id="input" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                    <input ng-model="bm.name" class="form-control" id="name" rows="5"></input>
+                </div>
+            </div>
+
+            <div class="col-sm-offset-2 col-sm-10">
+                <h4 class="text-danger"><a ng-href="{{bm.input}}">{{bm.name}}</a>, thả vào thanh bookmark</h4>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>

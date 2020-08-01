@@ -1,4 +1,17 @@
-let str = `{
+let str = `
+{
+    "_id" : NumberLong(1334),
+    "maxProcessingTime" : NumberLong(15),
+    "productBaseId" : NumberLong(0),
+    "templates" : {
+        "back" : "simplified-short-sleeve-back",
+        "front" : "simplified-short-sleeve-front",
+        "left" : "simplified-short-sleeve-left",
+        "right" : "simplified-short-sleeve-right"
+    }
+}
+
+{
     "_id" : NumberLong(1334),
     "maxProcessingTime" : NumberLong(15),
     "productBaseId" : NumberLong(0),

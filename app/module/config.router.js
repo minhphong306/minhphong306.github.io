@@ -42,4 +42,18 @@ angular
                 templateUrl: 'templates/robo.html',
                 controllerAs: 'rb',
             })
+
+            .state('tool.replacer', {
+                url: '/replacer',
+                controller: 'replacerCtrl',
+                templateUrl: 'templates/replacer.html',
+                controllerAs: 'rp',
+            })
+
+            .state('tool.bookmark-maker', {
+                url: '/bookmark-maker',
+                controller: 'bookmarkCtrl',
+                templateUrl: 'templates/bookmark-maker.html',
+                controllerAs: 'bm',
+            })
     });
