@@ -56,4 +56,11 @@ angular
                 templateUrl: 'templates/bookmark-maker.html',
                 controllerAs: 'bm',
             })
+
+            .state('tool.csv-2-json', {
+                url: '/csv-2-json',
+                controller: 'csvCtrl',
+                templateUrl: 'templates/csv.html',
+                controllerAs: 'csv',
+            })
     });
