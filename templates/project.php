@@ -34,13 +34,43 @@
                         <a 
                             target="_blank"
                             href="https://static.minhphong306.com/soft/AutoUpdateTime.rar">
-                            <button class="btn btn-success" title="Tải bản portable">
-                                <i class="fa fa-download"></i>
-                            </button>
                         </a>
                     </div>
                 </td>
             </tr>
+            <tr>
+                            <td>2</td>
+                            <td>Funny bear</td>
+                            <td>Chương trình test tính năng của progressive web app</td>
+                            <td>PET Project</td>
+                            <td>
+                                <label class="label label-success">Hoàn thành</label>
+                            </td>
+                            <td>
+                                <div>
+                                    <a
+                                        target="_blank"
+                                        href="https://github.com/minhphong306/minhphong306.github.io/blob/master/static/funny_bear.html">
+                                        <button class="btn btn-default" title="Xem project trên github">
+                                            <i class="fa fa-github"></i>
+                                        </button>
+                                    </a>
+                                    <a
+                                        target="_blank"
+                                        href="https://minhphong306.github.io/static/funny_bear.html?v=1">
+                                        <button class="btn btn-default" title="Xem demo">
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="mp-margin-top-5">
+                                    <a
+                                        target="_blank"
+                                        href="https://static.minhphong306.com/soft/AutoUpdateTime.rar">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
         </tbody>
     </table>
 
