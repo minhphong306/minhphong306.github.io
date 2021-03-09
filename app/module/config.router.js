@@ -63,4 +63,11 @@ angular
                 templateUrl: 'templates/csv.html',
                 controllerAs: 'csv',
             })
+
+            .state('tool.timestamp', {
+                url: '/timestamp',
+                controller: 'timestampCtrl',
+                templateUrl: 'templates/timestamp.html',
+                controllerAs: 'ts',
+            })
     });
