@@ -12,7 +12,7 @@
     </h3>
 
     <h3 class="text-danger">Input</h3>
-    <textarea id='ts_input' ng-model="ts.input" class="form-control" rows="8"></textarea>
+    <textarea id='ts_input' ng-model="ts.input" ng-change="ts.convert()" class="form-control" rows="8"></textarea>
 
     <div class="mp-padding-10">
         <div ng-if="ts.err.length > 0" class="bg bg-info mp-padding-10">
@@ -24,11 +24,6 @@
                 <button type="submit" class="btn btn-primary" ng-click="ts.convert()">
                     <span class="fa fa-rocket"></span>
                     Convert
-                </button>
-
-                <button class="btn btn-primary" ng-click="ts.copy()">
-                    <span class="fa fa-copy"></span>
-                    Copy output
                 </button>
             </div>
         </form>
