@@ -2,6 +2,7 @@ app.controller('timestampCtrl', function (mainFactory, $scope) {
     var vm = this;
     const initTs = Math.floor(new Date().getTime() / 1000)
     vm.input = initTs.toString()
+    vm.onlyNotEmpty = false
     vm.output = []
     convert();
     vm.err = '';
@@ -16,7 +17,12 @@ app.controller('timestampCtrl', function (mainFactory, $scope) {
         vm.output = [];
 
         for (let i = 0; i < lines.length; i++) {
-            vm.output.push(timestampToHuman(lines[i]));
+            const item = timestampToHuman(lines[i])
+
+            if (vm.onlyNotEmpty && item.ts.length === 0) {
+                continue
+            }
+            vm.output.push(item);
         }
     }
 
