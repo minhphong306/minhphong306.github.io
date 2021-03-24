@@ -70,4 +70,11 @@ angular
                 templateUrl: 'templates/timestamp.html',
                 controllerAs: 'ts',
             })
+
+            .state('tool.fbcurl', {
+                url: '/fbcurl',
+                controller: 'fbCurlCtrl',
+                templateUrl: 'templates/fbcurl.html',
+                controllerAs: 'fbcurl',
+            })
     });

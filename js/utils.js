@@ -16,7 +16,15 @@ function remove_special_char(str) {
     return str;
 }
 
-function copy_to_clipboard(elem_id){
+function parseMyJson(raw) {
+    try {
+        return JSON.parse(raw)
+    } catch (e) {
+        return false;
+    }
+}
+
+function copy_to_clipboard(elem_id) {
     var elem = document.getElementById(elem_id);
     elem.select();
     document.execCommand("copy");
