@@ -12,6 +12,7 @@ app.controller('fbCurlCtrl', function (mainFactory, $scope) {
     vm.copy = copy
 
     function convert() {
+        vm.err = '';
         if (!vm.input) {
             return
         }
