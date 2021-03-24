@@ -42,7 +42,7 @@ app.controller('fbCurlCtrl', function (mainFactory, $scope) {
 
         console.log(body)
 
-        vm.output = `curl --location --request GET '${url}' \\
+        vm.output = `curl --location --request POST '${url}' \\
 --header 'Content-Type: application/json' \\
 --data-raw '${body.sent_body}'`
     }
