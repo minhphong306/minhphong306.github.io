@@ -24,7 +24,7 @@ app.controller('fbCurlCtrl', function (mainFactory, $scope) {
         for (let i = 0; i < lines.length; i++) {
             const item = lines[i];
             if (item.includes("https://graph.facebook.com")) {
-                url = item;
+                url = item.substring(item.indexOf("https://graph.facebook.com"), item.length)
                 continue;
             }
 
@@ -39,6 +39,12 @@ app.controller('fbCurlCtrl', function (mainFactory, $scope) {
         }
 
         const body = parseMyJson(rawBody);
+        if (!body || !body.sent_body) {
+            vm.err = 'Body có vẻ không đúng'
+            return
+        }
+
+        body.sent_body = body.sent_body.replace(/'/g, "\\'");
 
         console.log(body)
 
