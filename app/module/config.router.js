@@ -77,4 +77,11 @@ angular
                 templateUrl: 'templates/fbcurl.html',
                 controllerAs: 'fbcurl',
             })
+
+            .state('tool.countappearance', {
+                url: '/countappr',
+                controller: 'countAppearanceCtrl',
+                templateUrl: 'templates/count_appearance.html',
+                controllerAs: 'ca',
+            })
     });
