@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo render component trong Vue</title>
+</head>
+<body>
+<div id="app">
+    <div class="floatdiv">
+        <h2>V-for không có key</h2>
+        <color-item v-for="(item, i) in items" @click.native="items.splice(i, 1)">
+            {{ item }}
+        </color-item>
+    </div>
+    <div class="floatdiv">
+        <h2>V-for có key</h2>
+        <color-item v-for="(item, i) in items1" @click.native="items1.splice(i, 1)"
+                    :key="item">
+            {{ item }}
+        </color-item>
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    const randomColor = () => `hsl(${Math.floor(Math.random() * 360)}, 75%, 85%)`;
+
+    Vue.component('color-item', {
+        template: '<p :style="{ backgroundColor: color, padding: `10px` }"><slot></slot></p>',
+        data: () => ({
+            color: randomColor()
+        })
+    });
+
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                items1: ['one', 'two', 'three', 'four', 'five'],
+                items: ['one', 'two', 'three', 'four', 'five']
+            }
+        }
+    })
+</script>
+
+<style>
+    .floatdiv {
+        float: left;
+        width: 40%;
+        margin: 5px;
+        border: 1px solid black;
+    }
+</style>
+</body>
+
+</html>

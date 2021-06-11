@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo render danh sách trong Vue</title>
+</head>
+<body>
+<div id="app">
+    <h2>Thêm ca sĩ</h2>
+    <input type="text" v-model="singer">
+    <button @click="addSinger">Thêm</button>
+
+    <hr>
+    <h2>Danh sách ca sĩ</h2>
+    <ul>
+        <li v-for="(item, index) in singers" :key="index"> {{ item }}</li>
+    </ul>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            singers: ["Binz", "Sơn Tùng M-TP", "Đen Vâu"],
+            singer: '',
+            index: 0,
+        },
+        methods: {
+            addSinger() {
+                if (this.singer.length === 0) {
+                    alert('Nhập tên ca sĩ đi pa')
+                    return
+                }
+
+                if (this.singers.includes(this.singer)) {
+                    alert('Ca sĩ này đã tồn tại rồi pa')
+                    return
+                }
+
+                this.singers.unshift(this.singer)
+                this.singer = ''
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
