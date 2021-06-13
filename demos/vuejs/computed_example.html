@@ -9,9 +9,21 @@
 </head>
 <body>
 <div id="app">
-    <input type="text" v-model="firstName"/>
-    <input type="text" v-model="lastName"/>
-    <p>{{ greeting('Oh my god, đôi giày, đây rồi: ', 'thêm param nữa nè ')}}</p>
+    <div class="floatdiv">
+        <h2>Test computed</h2>
+        <input type="text" v-model="firstName"/>
+        <input type="text" v-model="lastName"/>
+        <input type="text" v-model="clgt">
+        <p>{{ greeting('Oh my god, đôi giày, đây rồi: ', 'thêm param nữa nè ')}}</p>
+    </div>
+
+    <div class="floatdiv">
+        <h2>Test v-show</h2>
+        <div class="parent-div" v-show="condition">
+            <img src="https://minhphong306.files.wordpress.com/2020/03/hungry.png?w=213" alt="aaa">
+        </div>
+        <button @click="condition = !condition">Show hàng</button>
+    </div>
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -22,12 +34,15 @@
         data() {
             return {
                 firstName: '',
-                lastName: ''
+                lastName: '',
+                clgt: '',
+                condition: false,
             }
         },
         computed: {
             greeting() {
                 return (msg1, msg2) => {
+                    console.log('Tính lại rồi này :v')
                     return `${msg1} ${msg2} ${this.firstName} ${this.lastName}`
                 }
             }
