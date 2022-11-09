@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lunar new year countdown</title>
+    <script>
+        const ONE_DAY_MILLISECOND = 1000 * 60 * 60 * 24
+        const ONE_HOUR_MILLISECOND = 1000 * 60 * 60
+        const ONE_MINUTE_MILLISECOND = 1000 * 60
+        const ONE_SECOND_MILLISECOND = 1000
+        function calc() {
+            const today = new Date();
+            const newYearDate = new Date("01/22/2023");
+
+            let differenceInMillisecond = newYearDate.getTime() - today.getTime();
+
+            const dayDiff = Math.floor(differenceInMillisecond / ONE_DAY_MILLISECOND);
+            differenceInMillisecond = differenceInMillisecond - dayDiff * ONE_DAY_MILLISECOND
+
+            const hourDiff = Math.floor(differenceInMillisecond/ ONE_HOUR_MILLISECOND)
+            differenceInMillisecond = differenceInMillisecond - hourDiff * ONE_HOUR_MILLISECOND
+
+            const minuteDiff = Math.floor(differenceInMillisecond/ ONE_MINUTE_MILLISECOND)
+            differenceInMillisecond = differenceInMillisecond - minuteDiff * ONE_MINUTE_MILLISECOND
+
+            const secondDiff = Math.floor(differenceInMillisecond/ ONE_SECOND_MILLISECOND)
+            differenceInMillisecond = differenceInMillisecond - secondDiff * ONE_SECOND_MILLISECOND
+
+            document.getElementById("count_day").innerHTML = dayDiff;
+            document.getElementById("count_hour").innerHTML = hourDiff;
+            document.getElementById("count_minute").innerHTML = minuteDiff;
+            document.getElementById("count_second").innerHTML = secondDiff;
+        }
+    </script>
+</head>
+<body>
+Chỉ còn:
+<span id="count_day">0</span> ngày
+<span id="count_hour">0</span> giờ
+<span id="count_minute">0</span> phút
+<span id="count_second">0</span> giây nữa là đến Tết Nguyên Đán ^^
+<br>
+<button onclick="calc()">Tính lại</button>
+
+
+</body>
+</html>
